@@ -1,0 +1,23 @@
+html{
+    --wcs-color: #F76C6C;
+    --wcs-color-lighter: #F99797;
+}
+
+body{
+    margin: 0;
+}
+
+
+.headerplaceholder{
+    background-color: var(--wcs-color);
+    height: 160px;
+}
+
+.footerplaceholder{
+    background-color: var(--wcs-color-lighter);
+    height: 80px;
+}
+
+#content{
+    min-height: calc(100vh - 240px);
+}
