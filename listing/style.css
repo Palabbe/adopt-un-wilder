@@ -1,23 +1,47 @@
 html{
     --wcs-color: #F76C6C;
     --wcs-color-lighter: #F99797;
+    font-family: 'Roboto', sans-serif;
 }
 
 body{
     margin: 0;
 }
 
+h1{
+    font-variant-caps: all-small-caps;
+    color: var(--wcs-color);
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
 
 .headerplaceholder{
     background-color: var(--wcs-color);
-    height: 160px;
+    height: 120px;
 }
 
 .footerplaceholder{
-    background-color: var(--wcs-color-lighter);
+    background-color: var(--wcs-color);
     height: 80px;
 }
 
 #content{
-    min-height: calc(100vh - 240px);
+    min-height: calc(100vh - 200px);
+}
+
+#listing-logo{
+    height: 120px;
+    margin: 4rem 0px -30px;
+    fill: var(--wcs-color);
+}
+
+#profil-list{
+    background-color: var(--wcs-color-lighter);
+    margin: 2rem 200px 5rem;
+    height: 50rem;
 }
