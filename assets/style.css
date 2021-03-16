@@ -1,1 +1,47 @@
+html {
+    font-size: 10px;
+    font-family: 'Roboto', sans-serif;
+}
 
+/* COLORS CLASSES */
+.color-white {
+    color: #fff;
+}
+
+.color-salmon {
+    color: #F76C6C;
+}
+
+.color-light-salmon {
+    color: #FFD7D7;
+}
+/* ---------------- */
+
+header {
+    background-color: #F76C6C;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-size: 5.5rem;
+    font-weight: 900;
+    margin: 0;
+}
+
+header p {
+    font-size: 3rem;
+    font-weight: 400;
+    margin: 0;
+    padding-top: 1rem;
+}
+
+#auw-logo {
+    fill: #fff;
+    height: auto;
+    width: 170px;
+    padding: 3rem;
+}
