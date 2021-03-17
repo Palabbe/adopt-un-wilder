@@ -3,18 +3,74 @@ html {
     font-family: 'Roboto', sans-serif;
 }
 
+.container {
+    max-width: 1140px;
+    margin: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+
 /* COLORS CLASSES */
 .color-white {
     color: #fff;
+}
+
+.color-light-salmon {
+    color: #FFD7D7;
 }
 
 .color-salmon {
     color: #F76C6C;
 }
 
-.color-light-salmon {
-    color: #FFD7D7;
+/* BTN CLASSES */
+
+.white-btn {
+    background-color: #fff;
+    color: #F76C6C;
+    padding: 1rem;
+    border-radius: 5px;
+    margin: 1rem;
 }
+
+/* TXT CLASSES */
+
+.center-txt {
+    text-align: center;
+}
+/* ---------------- */
+
+footer {
+    background-color: #F76C6C;
+    padding: 1rem;
+}
+
+footer div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.6rem;
+}
+
+#about-txt {
+    display: inline-block;
+    font-weight: 300;
+    max-width: 50%;
+}
+
+#footer-wcs-logo {
+    width: 100px;
+    margin: 2rem 1.5rem 1.5rem 1.5rem;
+}
+
+footer > p {
+    margin-top: 3rem;
+    font-weight: 300;
+    font-size: 1.2rem;
+
 /* ---------------- */
 
 header {
