@@ -1,6 +1,7 @@
 * {
     font-family: 'Roboto', serif;
     color: var(--wcs-color);
+    padding: 0;
 }
 
 html{
