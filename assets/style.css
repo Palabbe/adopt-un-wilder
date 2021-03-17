@@ -4,7 +4,7 @@ html {
 }
 
 .container {
-    max-width: 1110px;
+    max-width: 1140px;
     margin: auto;
 }
 
@@ -20,7 +20,6 @@ a {
 .color-light-salmon {
     color: #FFD7D7;
 }
-/* ---------------- */
 
 /* BTN CLASSES */
 
@@ -32,10 +31,16 @@ a {
     margin: 1rem;
 }
 
+/* TXT CLASSES */
+
+.center-txt {
+    text-align: center;
+}
 /* ---------------- */
 
 footer {
     background-color: #F76C6C;
+    padding: 1rem;
 }
 
 footer div{
@@ -45,13 +50,19 @@ footer div{
     font-size: 1.6rem;
 }
 
-footer p {
+#about-txt {
     display: inline-block;
-    max-width: 350px;
     font-weight: 300;
+    max-width: 50%;
 }
 
 #footer-wcs-logo {
-    width: 77px;
-    margin: 1.5rem;
+    width: 100px;
+    margin: 2rem 1.5rem 1.5rem 1.5rem;
+}
+
+footer > p {
+    margin-top: 3rem;
+    font-weight: 300;
+    font-size: 1.2rem;
 }
