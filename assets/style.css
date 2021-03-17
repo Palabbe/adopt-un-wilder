@@ -57,7 +57,7 @@ body{
 .regions-filter {
     display: flex;
     justify-content: center;
-    align-items: baseline;
+    align-items: center;
     flex-wrap: wrap;
     margin: 0 auto;
     margin-top: 50px;
@@ -73,13 +73,20 @@ body{
     border: 2px solid var(--wcs-color);
     background-color: var(--wcs-white);
     color: var(--wcs-color-lighter);
-    width: 500px;
+    width: 100%;
     padding: 10px;
     
 }
 
-.regions-filter input[type="checkbox"] {
-    border-color: var(--wcs-color);
+.remote-choice {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: auto;
+}
+
+.remote-choice span {
+    padding: 15px;
 }
 
 .no-filters {
