@@ -110,6 +110,7 @@ header p {
     text-decoration: none;
 }
 
+
 .role-choice-icon {
     height: 250px;
     width: 250px;
@@ -208,6 +209,18 @@ footer > p {
     margin-top: 3rem;
     font-weight: 300;
     font-size: 1.2rem;
-
 }
 
+header p {
+    font-size: 3rem;
+    font-weight: 400;
+    margin: 0;
+    padding-top: 1rem;
+}
+
+#auw-logo {
+    fill: #fff;
+    height: auto;
+    width: 170px;
+    padding: 3rem;
+}
