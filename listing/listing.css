@@ -1,0 +1,46 @@
+.page-listing h1{
+    font-variant-caps: all-small-caps;
+    font-size: 3rem;
+    margin: 3rem 0px 1rem;
+    color: var(--wcs-color);
+}
+
+/* vv Maybe Place Holder vv */
+.page-listing p{
+    font-size: 1.6rem;
+    color: #333;
+}
+/* ^^ Maybe Place Holder ^^ */
+
+.flex-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.profil{
+    display: inline-flex;
+    border: 2px solid red;
+    margin: 10px;
+    width: 600px;
+    padding: 10px;
+}
+
+.profil-picture{
+    border-radius: 50%;
+    margin: 10px;
+}
+
+#listing-logo{
+    height: 120px;
+    margin: 4rem 0px -30px;
+    fill: var(--wcs-color);
+}
+
+#profil-list{
+    /* background-color: var(--wcs-color-lighter); */
+    justify-content: center;
+    margin: 2rem auto 5rem;
+    width: 800px;
+}
