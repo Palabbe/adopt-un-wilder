@@ -58,3 +58,12 @@
     font-size: 13px;
     font-weight: bold;
 }
+
+.seeMore {
+    padding: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+    margin-left: 300px;
+}
