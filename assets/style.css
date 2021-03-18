@@ -124,8 +124,10 @@ header p {
 }
 
 .role-choice a span {
+    display: block;
     color: var(--wcs-color);
     font-weight: bold;
+    margin-top: 15px;
 }
 
 .regions-filter {
