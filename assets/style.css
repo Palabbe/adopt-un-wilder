@@ -91,6 +91,10 @@ header p {
     text-align: center;
 }
 
+section {
+    padding: 40px;
+}
+
 .roles-filter {
     width: auto;
 }
@@ -131,17 +135,21 @@ header p {
 }
 
 .regions-filter {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    margin: 0 auto;
     margin-top: 50px;
     margin-bottom: 50px;
+    margin: 0 auto;
     width: auto;
 }
 
 .regions-filter div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.regions-filter div {
+    margin-top: 15px;
     margin-right: 0px;
 }
 
@@ -168,15 +176,20 @@ header p {
 
 .no-filters {
     margin-top: 50px;
+    margin-bottom: 50px;
     font-weight: bold;
 }
 
-.no-filters a {
+.skip-action {
+    padding: 15px;
+}
+
+.skip-action a {
     color: var(--wcs-color);
     text-decoration: underline;
 }
 
-.no-filters p {
+.skip-action p {
     margin: 5px;
     font-weight: lighter;
 }
