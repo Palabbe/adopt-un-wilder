@@ -70,6 +70,7 @@ footer > p {
     margin-top: 3rem;
     font-weight: 300;
     font-size: 1.2rem;
+}
 
 /* ---------------- */
 
@@ -100,4 +101,70 @@ header p {
     height: auto;
     width: 170px;
     padding: 3rem;
+}
+
+/* ---------- LISTING ---------- */
+html{
+    --wcs-color: #F76C6C;
+    --wcs-color-lighter: #F99797;
+}
+
+.page-listing h1{
+    font-variant-caps: all-small-caps;
+    font-size: 3rem;
+    margin: 3rem 0px 1rem;
+    color: var(--wcs-color);
+}
+
+/* vv Maybe Place Holder vv */
+.page-listing p{
+    font-size: 1.6rem;
+}
+/* ^^ Maybe Place Holder ^^ */
+
+.flex-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.headerplaceholder{
+    background-color: var(--wcs-color);
+    height: 120px;
+}
+
+.footerplaceholder{
+    background-color: var(--wcs-color);
+    height: 80px;
+}
+
+#f{
+    min-height: calc(100vh - 200px);
+}
+
+#listing-logo{
+    height: 120px;
+    margin: 4rem 0px -30px;
+    fill: var(--wcs-color);
+}
+
+#profil-list{
+    /* background-color: var(--wcs-color-lighter); */
+    justify-content: center;
+    margin: 2rem auto 5rem;
+    width: 800px;
+    }
+
+.profil{
+    display: inline-flex;
+    border: 2px solid red;
+    margin: 10px;
+    width: 600px;
+    padding: 10px;
+}
+
+.profil-picture{
+    border-radius: 50%;
+    margin: 10px;
 }

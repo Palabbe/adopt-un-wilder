@@ -1,8 +1,9 @@
-// const profilPic = document.querySelectorAll(".profil-picture");
 
-// for (let i = 0; i < profilPic.length; i++)
-// i % 2 == 0 ? return : profilPic.item(i).
+const profil = document.querySelectorAll(".profil");
 
-// array.forEach(element => {
-    
-// });
+
+for (let i = 0; i < profil.length; i++)
+{
+    if (i % 2 ==0)
+    profil[i].appendChild(profil[i].lastElementChild.previousElementSibling)
+}
