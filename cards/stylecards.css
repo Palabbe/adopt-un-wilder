@@ -29,22 +29,32 @@
 }
 
 
-h1 {
-    font-style: bold;
+.cardContent h1 {
+    font-weight: bold;
     font-size: 20px;
-}
+    }
 
-h2 {
+.cardContent h2 {
+    font-weight: 600;
     font-size: 15px;
 }
 
-p {
+.cardContent p {
     font-style: italic;
 }
 
+#cardButtons {
+    margin-right: 10px;  
+}
 
-ul li {
-    list-style: none;
-    display: inline-block;
-    margin-right: 10px;
-    }
+
+
+.contactMe {
+    background-color:#F76C6C;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+}
