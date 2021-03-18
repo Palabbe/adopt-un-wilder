@@ -1,0 +1,22 @@
+#map{
+   margin: auto;
+}
+#map-svg{
+    fill:rgba(255, 30, 0, 0.274);
+    stroke: white;
+    stroke-width: 6px;
+    /* padding: 200px; */
+    margin: 20rem;
+    transform: scale(2);
+    transition: all 500ms;
+
+}
+
+#map-svg path:hover{
+    fill: var(--wcs-color-lighter);
+    box-shadow: 50px 50px 30px black;
+}
+
+button{
+    margin-left: 10rem;
+}
