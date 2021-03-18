@@ -1,6 +1,18 @@
-html {
+* {
+    padding: 0;
+}
+
+html{
+    --wcs-color: #F76C6C;
+    --wcs-color-lighter: #F99797;
+    --wcs-color-white: #FFF;
+    color: var(--wcs-color);
     font-size: 10px;
     font-family: 'Roboto', sans-serif;
+}
+
+body {
+    margin: 0;
 }
 
 .container {
@@ -41,37 +53,8 @@ a {
 .center-txt {
     text-align: center;
 }
-/* ---------------- */
 
-footer {
-    background-color: #F76C6C;
-    padding: 1rem;
-}
-
-footer div{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 1.6rem;
-}
-
-#about-txt {
-    display: inline-block;
-    font-weight: 300;
-    max-width: 50%;
-}
-
-#footer-wcs-logo {
-    width: 100px;
-    margin: 2rem 1.5rem 1.5rem 1.5rem;
-}
-
-footer > p {
-    margin-top: 3rem;
-    font-weight: 300;
-    font-size: 1.2rem;
-
-/* ---------------- */
+/* ------- HEADER --------- */
 
 header {
     background-color: #F76C6C;
@@ -101,3 +84,130 @@ header p {
     width: 170px;
     padding: 3rem;
 }
+
+/*--------FILTERS CLASSES ---------*/
+
+.content {
+    text-align: center;
+}
+
+.roles-filter {
+    width: auto;
+}
+
+.roles-filter ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.roles-filter ul li {
+    display: inline-block;
+    margin: 15px;
+}
+
+.role-choice a {
+    text-decoration: none;
+}
+
+.role-choice-icon {
+    height: 250px;
+    width: 250px;
+    background-color: var(--wcs-color);
+    border-radius: 50%;
+}
+
+.role-choice-icon svg {
+    height: 250px;
+    width: 250px;
+    fill: var(--wcs-color-white);
+}
+
+.role-choice a span {
+    color: var(--wcs-color);
+    font-weight: bold;
+}
+
+.regions-filter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: auto;
+}
+
+.regions-filter div {
+    margin-right: 0px;
+}
+
+.regions-filter select {
+    border: 2px solid var(--wcs-color);
+    background-color: var(--wcs-white);
+    color: var(--wcs-color-lighter);
+    width: 400px;
+    padding: 10px;
+    
+}
+
+.remote-choice {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 50px;
+    width: auto;
+}
+
+.remote-choice span {
+    padding: 15px;
+}
+
+.no-filters {
+    margin-top: 50px;
+    font-weight: bold;
+}
+
+.no-filters a {
+    color: var(--wcs-color);
+    text-decoration: underline;
+}
+
+.no-filters p {
+    margin: 5px;
+    font-weight: lighter;
+}
+
+/* ------- FOOTER --------- */
+
+footer {
+    background-color: #F76C6C;
+    padding: 1rem;
+}
+
+footer div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.6rem;
+}
+
+#about-txt {
+    display: inline-block;
+    font-weight: 300;
+    max-width: 50%;
+}
+
+#footer-wcs-logo {
+    width: 100px;
+    margin: 2rem 1.5rem 1.5rem 1.5rem;
+}
+
+footer > p {
+    margin-top: 3rem;
+    font-weight: 300;
+    font-size: 1.2rem;
+
+}
+
