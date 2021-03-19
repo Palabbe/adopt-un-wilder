@@ -1,22 +1,37 @@
 #map{
-   margin: auto;
+    width: 30%;
+    overflow: hidden;
+    margin-bottom: 5rem;
+    display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-items: center;
+	align-content: flex-start;
+    /* margin: auto; */
 }
 #map-svg{
     fill:rgba(255, 30, 0, 0.274);
     stroke: white;
     stroke-width: 6px;
-    /* padding: 200px; */
-    margin: 20rem;
-    transform: scale(2);
-    transition: all 500ms;
-
 }
 
 #map-svg path:hover{
     fill: var(--wcs-color-lighter);
-    box-shadow: 50px 50px 30px black;
+    stroke-width: 6px;
 }
 
-button{
-    margin-left: 10rem;
+.red-btn{
+    background-color: var(--wcs-color-lighter);
+    color: white; 
+    border: solid 2px white;
+    border-radius: 5px;
+    padding: .5rem 1.5rem;
+    margin: 1rem;
+}
+.red-btn:hover{
+    background-color: white;
+    color: var(--wcs-color);
+    border-color: var(--wcs-color-lighter);
+    transform: scale(1.1);
 }
