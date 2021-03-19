@@ -92,11 +92,20 @@ header p {
 }
 
 section {
-    padding: 40px;
+    padding: 4rem;
 }
 
 .roles-filter {
     width: auto;
+}
+
+.subtitles-size {
+    font-size: 2.5rem;
+}
+
+.main-text-size {
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
 .roles-filter ul {
@@ -107,7 +116,7 @@ section {
 
 .roles-filter ul li {
     display: inline-block;
-    margin: 15px;
+    margin: 1.5rem;
 }
 
 .role-choice a {
@@ -130,13 +139,14 @@ section {
 .role-choice a span {
     display: block;
     color: var(--wcs-color);
+    font-size: 2rem;
     font-weight: bold;
-    margin-top: 15px;
+    margin-top: 1.5rem;
 }
 
 .regions-filter {
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
     margin: 0 auto;
     width: auto;
 }
@@ -149,8 +159,8 @@ section {
 }
 
 .regions-filter div {
-    margin-top: 15px;
-    margin-right: 0px;
+    margin-top: 1.5rem;
+    margin-right: 0;
 }
 
 .regions-filter select {
@@ -158,7 +168,7 @@ section {
     background-color: var(--wcs-white);
     color: var(--wcs-color-lighter);
     width: 400px;
-    padding: 10px;
+    padding: 1rem;
     
 }
 
@@ -166,22 +176,25 @@ section {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-left: 50px;
+    margin-left: 5rem;
     width: auto;
 }
 
 .remote-choice span {
-    padding: 15px;
+    padding: 1.5rem;
 }
 
 .no-filters {
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
     font-weight: bold;
 }
 
 .skip-action {
-    padding: 15px;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    padding: 1.5rem;
 }
 
 .skip-action a {
@@ -190,7 +203,7 @@ section {
 }
 
 .skip-action p {
-    margin: 5px;
+    margin: 0.5rem;
     font-weight: lighter;
 }
 
