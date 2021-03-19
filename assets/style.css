@@ -7,7 +7,7 @@ html{
     --wcs-color-lighter: #F99797;
     --wcs-color-white: #FFF;
     color: var(--wcs-color);
-    font-size: 10px;
+    font-size: 62.5%;
     font-family: 'Roboto', sans-serif;
 }
 
