@@ -87,7 +87,7 @@ header p {
 
 /* --- animation rotate-vert-center --- */
 .rotate-vert-center {
-    animation: rotate-vert-center 4s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite both;
+    animation: rotate-vert-center 4s linear infinite both;
 }
 
 @keyframes rotate-vert-center {
