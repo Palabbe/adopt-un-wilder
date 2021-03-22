@@ -226,6 +226,10 @@ section {
     text-decoration: underline;
 }
 
+.skip-action a:hover {
+    color: var(--wcs-color-lighter);
+}
+
 .skip-action p {
     margin: 0.5rem;
     font-weight: lighter;
