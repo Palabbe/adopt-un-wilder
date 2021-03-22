@@ -157,6 +157,7 @@ section {
 .role-choice-icon svg {
     height: 250px;
     width: 250px;
+    margin-top: 2rem;
     fill: var(--wcs-color-white);
 }
 
