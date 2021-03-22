@@ -139,6 +139,14 @@ section {
 }
 
 
+.role-choice a:hover span {
+    color: var(--wcs-color-lighter);
+}
+
+.role-choice a:hover div {
+    background-color: var(--wcs-color-lighter);
+}
+
 .role-choice-icon {
     height: 250px;
     width: 250px;
