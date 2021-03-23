@@ -270,6 +270,21 @@ section {
     font-weight: lighter;
 }
 
+/*------------ JS interactivity CSS CLASSES -----------*/
+.choosen-role div.role-choice-icon{
+    background-color: var(--wcs-color-lighter);
+    border: 4px solid var(--wcs-color);
+}
+
+.choosen-role .svg-icon {
+    height: 275px;
+}
+
+.choosen-role a span{
+    color: var(--wcs-color-lighter);
+}
+
+
 /* ------- FOOTER --------- */
 
 footer {
