@@ -1,4 +1,4 @@
-.page-listing h1{
+#listing-title{
     font-variant-caps: all-small-caps;
     font-size: 3rem;
     margin: 3rem 0px 1rem;
@@ -19,19 +19,6 @@
     flex-direction: column;
 }
 
-.profil{
-    display: inline-flex;
-    border: 2px solid red;
-    margin: 10px;
-    width: 600px;
-    padding: 10px;
-}
-
-.profil-picture{
-    border-radius: 50%;
-    margin: 10px;
-}
-
 #listing-logo{
     height: 120px;
     margin: 4rem 0px -30px;
@@ -39,7 +26,6 @@
 }
 
 #profil-list{
-    /* background-color: var(--wcs-color-lighter); */
     justify-content: center;
     margin: 2rem auto 5rem;
     width: 800px;
