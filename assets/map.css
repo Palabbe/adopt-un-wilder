@@ -1,0 +1,16 @@
+/* REGIONS FILTER MAP CLASSES */
+
+#map{
+    width: 30%;  
+}
+#map-svg{
+    fill:var(--wcs-color-lighter);
+    stroke: white;
+    stroke-width: 6px;
+}
+
+#map-svg path:hover{
+    fill: var(--wcs-color);
+    stroke-width: 6px;
+    transition: fill 1s ease-in-out;
+}
