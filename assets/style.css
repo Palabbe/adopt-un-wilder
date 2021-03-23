@@ -139,6 +139,14 @@ section {
 }
 
 
+.role-choice a:hover span {
+    color: var(--wcs-color-lighter);
+}
+
+.role-choice a:hover div {
+    background-color: var(--wcs-color-lighter);
+}
+
 .role-choice-icon {
     height: 250px;
     width: 250px;
@@ -146,10 +154,16 @@ section {
     border-radius: 50%;
 }
 
-.role-choice-icon svg {
+.svg-icon {
     height: 250px;
     width: 250px;
+    margin-top: 2rem;
     fill: var(--wcs-color-white);
+}
+
+.svg-icon:hover {
+    height: 275px;
+    transition: height 1s ease-in;
 }
 
 .role-choice a span {
@@ -216,6 +230,10 @@ section {
 .skip-action a {
     color: var(--wcs-color);
     text-decoration: underline;
+}
+
+.skip-action a:hover {
+    color: var(--wcs-color-lighter);
 }
 
 .skip-action p {
