@@ -13,7 +13,7 @@ html{
 }
 
 body {
-    margin: 0;
+    margin: 0 auto;
 }
 
 .container {
@@ -260,7 +260,7 @@ footer {
     margin-top: 2rem;
 }
 
-footer div{
+footer div {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -279,9 +279,7 @@ footer div{
     margin: 2rem 1.5rem 1.5rem 1.5rem;
 }
 
-footer > p {
-    margin-top: 3rem;
-    font-weight: 300;
+#credits {
     font-size: 1.2rem;
     color: var(--wcs-color-white);
 }
@@ -292,4 +290,29 @@ footer > p {
 
 #credits a:hover {
     color: var(--wcs-color-more-lighter);
+}
+
+
+
+/* ----------------- MEDIA QUERIES ------------------- */
+
+@media screen and (max-width: 1060px) {
+    
+    footer div {
+        display: block;
+        text-align: center;
+    }
+
+    #footer-wcs-links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 810px) {
+    header {
+        display: block;
+        padding: 0 2rem 4rem 2rem;
+    }
 }
