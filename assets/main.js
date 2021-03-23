@@ -10,6 +10,7 @@ const bretagne = "Bretagne";
 const alsace = "Alsace";
 
 const studentInfo = [
+    //// Tranche 1 ----------------------------------------------------------------------------------------------
     {
         name : "Julien Nicolas",
         lastname : "Brachelet-Randoulet",
@@ -149,7 +150,7 @@ const studentInfo = [
         hobbies : "fanfare, batterie",
         previousExperience : "",
     },
-
+    //// Tranche 2 ----------------------------------------------------------------------------------------------
     {
         name : "Baptiste",
         lastname : "Grias",
@@ -276,8 +277,8 @@ const studentInfo = [
         previousExperience : " ",
     },
 
-    // ----------------------- PHP ---------------------------
-
+    // ----------------------- PHP 
+    //// Tranche 3  ----------------------------------------------------------------------------------------------
     {
         name : "Tony",
         lastname : "Alastrue",
@@ -408,6 +409,7 @@ const studentInfo = [
         hobbies :"Plongée, Boxe",
         previousExperience :" "
     },
+    //// Tranche 4 ----------------------------------------------------------------------------------------------
     {
         name :"Pauline",
         lastname :"Guiho",
