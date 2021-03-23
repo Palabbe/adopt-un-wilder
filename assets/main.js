@@ -4,7 +4,10 @@ const nouvelleAquitaine = "Nouvelle-Aquitaine";
 const centreValDeLoire = "Centre-Val de Loire";
 const occitanie = "Occitanie";
 const grandEst = "Grand Est";
-
+const paysDeLaLoire = "Pays de la Loire";
+const auvergneRhoneAlpes = "Auvergne-Rhône-Alpes";
+const bretagne = "Bretagne";
+const alsace = "Alsace";
 
 
 
