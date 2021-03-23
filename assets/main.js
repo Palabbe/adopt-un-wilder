@@ -9,11 +9,7 @@ const auvergneRhoneAlpes = "Auvergne-Rhône-Alpes";
 const bretagne = "Bretagne";
 const alsace = "Alsace";
 
-
-
-
-
-const studentInfo = [ 
+const studentInfo = [
     {
         name : "Julien Nicolas",
         lastname : "Brachelet-Randoulet",
@@ -554,5 +550,5 @@ const studentInfo = [
         softSkills :" ",
         hobbies :"Jeux-Video, BasketBall",
         previousExperience :" "
-    },
-]
+    }
+];
