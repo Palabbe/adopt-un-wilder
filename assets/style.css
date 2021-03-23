@@ -234,8 +234,6 @@ section {
 
 .skip-action a:hover {
     color: var(--wcs-color-lighter);
-    font-size: 1.9rem;
-    transition: color 2s ease-in;
 }
 
 .skip-action p {
