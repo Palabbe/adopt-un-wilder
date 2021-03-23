@@ -154,11 +154,16 @@ section {
     border-radius: 50%;
 }
 
-.role-choice-icon svg {
+.svg-icon {
     height: 250px;
     width: 250px;
     margin-top: 2rem;
     fill: var(--wcs-color-white);
+}
+
+.svg-icon:hover {
+    height: 275px;
+    transition: height 1s ease-in;
 }
 
 .role-choice a span {
@@ -229,6 +234,8 @@ section {
 
 .skip-action a:hover {
     color: var(--wcs-color-lighter);
+    font-size: 1.9rem;
+    transition: color 2s ease-in;
 }
 
 .skip-action p {
