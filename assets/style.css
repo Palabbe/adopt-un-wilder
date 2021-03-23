@@ -285,3 +285,11 @@ footer > p {
     font-size: 1.2rem;
     color: var(--wcs-color-white);
 }
+
+#credits a {
+    color: var(--wcs-color-white);
+}
+
+#credits a:hover {
+    color: var(--wcs-color-more-lighter);
+}
