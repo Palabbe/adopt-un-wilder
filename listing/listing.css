@@ -19,10 +19,15 @@
     flex-direction: column;
 }
 
+section {
+    padding: 1rem;
+}
+
 #listing-logo{
     height: 120px;
-    margin: 4rem 0px -30px;
+    margin: 2rem 0px -30px;
     fill: var(--wcs-color);
+    animation: rotationPonctual 8s .7s ease-in-out;
 }
 
 #profil-list{
@@ -30,3 +35,40 @@
     margin:  auto ;
     width: 800px;
 }
+
+.fullCard{
+    animation: sliding .5s ease-out forwards;
+    opacity: 0;
+    animation-delay: .5s;
+}
+
+@keyframes sliding{
+    0%{
+        transform: translate(-200px, 200%);
+        opacity: 0;
+        scale: 1.5;
+    }
+    60%{
+        transform: translate(-50px, 10%);
+        opacity: .5;
+    }
+    100%{
+        transform: translate(0%, 0%);
+        opacity: 1;
+        scale: 1;
+    }
+
+}
+
+@keyframes rotationPonctual {
+    0%{ transform: rotate3d(0,0,0, 0);}
+    10%{ transform: rotate3d(0,1,0, 180deg);}
+    100%{ transform: rotate3d(0,1,0, 180deg);}
+    }
+
+.fullCard:nth-child(1) {animation-delay: .0s; }
+.fullCard:nth-child(2) {animation-delay: .1s; }
+.fullCard:nth-child(3) {animation-delay: .2s; }
+.fullCard:nth-child(4) {animation-delay: .3s; }
+.fullCard:nth-child(5) {animation-delay: .4s; }
+
