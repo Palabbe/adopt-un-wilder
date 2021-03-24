@@ -83,7 +83,8 @@ for (let index = 0; index < studentInfo.length; index++)
                     studentInfo[index].speciality,
                     studentInfo[index].studentMail,
                     studentInfo[index].region,
-                    studentInfo[index].photo);
+
+                    studentInfo[index].photo ? studentInfo[index].photo : "/assets/img/avatar.png" );
 }
 
 //Alternance gauche droite
