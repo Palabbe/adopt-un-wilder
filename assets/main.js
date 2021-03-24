@@ -394,7 +394,7 @@ const studentInfo = [
         softSkills :" ",
         hobbies :"jeux vidéos, bricolage",
         previousExperience :" ",
-        photo : "assets/img/mickael-garatens.jpg",
+        photo : "/assets/img/mickael-garatens.jpg",
     },
     {
         name :"Jody",
@@ -493,7 +493,7 @@ const studentInfo = [
         softSkills :" ",
         hobbies :"pêche, taekwondo",
         previousExperience :" ",
-        photo : "assets/img/kevin-janson.jpg",
+        photo : "/assets/img/kevin-janson.jpg",
     },
     {
         name :"Guillaume",
@@ -591,6 +591,6 @@ const studentInfo = [
         softSkills :" ",
         hobbies :"jeux-vidéos, basket-ball",
         previousExperience :" ",
-        photo : "/assets/img/wissam-taleb",
+        photo : "/assets/img/wissam-taleb.png", 
     }
 ];

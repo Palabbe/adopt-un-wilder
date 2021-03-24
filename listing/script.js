@@ -1,4 +1,4 @@
-function createAllCards(name, linkedin, github, speciality, mail, description) {
+function createAllCards(name, linkedin, github, speciality, mail, description, photo) {
     const profilList = document.getElementById("profil-list");
 
     const fullCard = document.createElement("div");
@@ -8,7 +8,7 @@ function createAllCards(name, linkedin, github, speciality, mail, description) {
     const cardPicture = document.createElement("div");
     cardPicture.classList.add("cardPicture");
     cardPicture.appendChild(document.createElement('img'));
-    cardPicture.children[0].src = "/assets/img/austin-wade-X6Uj51n5CE8-unsplash.jpg";
+    cardPicture.children[0].src = photo;
     fullCard.appendChild(cardPicture);
 
     const card = document.createElement("div");
@@ -82,7 +82,8 @@ for (let index = 0; index < studentInfo.length; index++)
                     studentInfo[index].githubProfile,
                     studentInfo[index].speciality,
                     studentInfo[index].studentMail,
-                    studentInfo[index].region);
+                    studentInfo[index].region,
+                    studentInfo[index].photo);
 }
 
 //Alternance gauche droite
