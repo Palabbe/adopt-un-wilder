@@ -403,3 +403,16 @@ footer div {
         width: 25rem;
     }
 }
+
+@media screen and (max-width: 375px) {
+
+    .role-choice-icon {
+        height: 175px;
+        width: 175px;
+    }
+
+    .svg-icon {
+        height: 175px;
+        width: 175px;
+    }
+}
