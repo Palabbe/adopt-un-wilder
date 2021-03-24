@@ -366,3 +366,40 @@ footer div {
         padding: 0 2rem 4rem 2rem;
     }
 }
+
+@media screen and (max-width: 768px) {
+    
+    div.regions-map {
+        display: none;
+    }
+
+    select.regions-select {
+        display: block;
+        outline: none;
+    }
+}
+
+@media screen and (min-width: 768.1px) {
+    
+    div.regions-map {
+        display: block;
+    }
+    
+    select.regions-select {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 449px) {
+
+    select.regions-select {
+        width: 35rem;
+    }
+}
+
+@media screen and (max-width: 392px) {
+
+    select.regions-select {
+        width: 25rem;
+    }
+}
