@@ -1,7 +1,7 @@
 /* REGIONS FILTER MAP CLASSES */
 
 #map{
-    width: 30%;  
+    width: 500px;  
 }
 #map-svg{
     fill:var(--wcs-color-lighter);
