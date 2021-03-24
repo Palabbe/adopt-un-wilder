@@ -1,4 +1,5 @@
-function createAllCards(name, linkedin, github, speciality, mail, description, photo) {
+function createAllCards(student) {
+    const {name, linkedin, github, speciality, mail, description, photo, id} = student
     const profilList = document.getElementById("profil-list");
 
     const fullCard = document.createElement("div");
@@ -8,7 +9,7 @@ function createAllCards(name, linkedin, github, speciality, mail, description, p
     const cardPicture = document.createElement("div");
     cardPicture.classList.add("cardPicture");
     cardPicture.appendChild(document.createElement('img'));
-    cardPicture.children[0].src = photo;
+    cardPicture.children[0].src = photo || "/assets/img/avatar.png" ;
     fullCard.appendChild(cardPicture);
 
     const card = document.createElement("div");
@@ -20,11 +21,11 @@ function createAllCards(name, linkedin, github, speciality, mail, description, p
     card.appendChild(cardContent);
 
     const studentName = document.createElement("h1");
-    studentName.innerHTML = name
+    studentName.innerHTML = name;
     const studentProfile = document.createElement("h2");
-    studentProfile.innerHTML = speciality
+    studentProfile.innerHTML = speciality;
     const studentDescription = document.createElement("p");
-    studentDescription.innerHTML = description
+    studentDescription.innerHTML = description || '';
     cardContent.appendChild(studentName);
     cardContent.appendChild(studentProfile);
     cardContent.appendChild(studentDescription);
@@ -63,9 +64,10 @@ function createAllCards(name, linkedin, github, speciality, mail, description, p
     cardFooter.appendChild(contactMe);
 
     //see more
-    const seeMore = document.createElement("a");
+    const seeMore = document.createElement("button");
     seeMore.classList.add("seeMore");
     seeMore.innerHTML = "see more ";
+    seeMore.onclick = () => openModal(id);
     cardFooter.appendChild(seeMore);
     
     //chevron see more
@@ -75,25 +77,50 @@ function createAllCards(name, linkedin, github, speciality, mail, description, p
 }
 
 //generation cartes
-for (let index = 0; index < studentInfo.length; index++)
-{
-    createAllCards(studentInfo[index].name,
-                    studentInfo[index].linkedinProfile,
-                    studentInfo[index].githubProfile,
-                    studentInfo[index].speciality,
-                    studentInfo[index].studentMail,
-                    studentInfo[index].region,
+studentsInfos.forEach(student => createAllCards(student))
 
-                    studentInfo[index].photo ? studentInfo[index].photo : "/assets/img/avatar.png" );
-}
 
 //Alternance gauche droite
 const allCards = document.getElementsByClassName("fullCard");
 
-for (let i = 0; i < allCards.length; i++)
-{
-    if (i%2 == true)
-    {
+for (let i = 0; i < allCards.length; i++) {
+    if (i % 2) {
         allCards[i].classList.add("reverse-order");
     }
+}
+
+
+function openModal(studentId) {
+    const selectedStudent = studentsInfos.find(student => student.id === studentId)
+
+    const modalContainer = document.createElement("div")
+    modalContainer.classList.add("modal-container")
+
+    const modal = document.createElement("div")
+    modal.classList.add("modal")
+    modalContainer.appendChild(modal)
+
+    const modalHeader = document.createElement("div")
+    modalHeader.classList.add("modal-header")
+    modal.appendChild(modalHeader)
+
+    const profilImg = document.createElement("img")
+    profilImg.classList.add("profil-img")
+    modalHeader.appendChild(profilImg)
+
+
+
+    const nameTitle = document.createElement("h2")
+    nameTitle.innerHTML = selectedStudent.name
+
+    const hobbyList = document.createElement("ul")
+    selectedStudent.hobbies.forEach(hobby => {
+        const hobbyItem = document.createElement("li")
+        hobbyItem.innerHTML = hobby
+        hobbyList.appendChild(hobbyItem)
+    })
+
+
+
+    // document.body.appendChild(modalContainer)
 }
