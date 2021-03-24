@@ -1,0 +1,32 @@
+#listing-title{
+    font-variant-caps: all-small-caps;
+    font-size: 3rem;
+    margin: 3rem 0px 1rem;
+    color: var(--wcs-color);
+}
+
+/* vv Maybe Place Holder vv */
+.page-listing p{
+    font-size: 1.6rem;
+    color: #333;
+}
+/* ^^ Maybe Place Holder ^^ */
+
+.flex-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#listing-logo{
+    height: 120px;
+    margin: 4rem 0px -30px;
+    fill: var(--wcs-color);
+}
+
+#profil-list{
+    justify-content: center;
+    margin:  auto ;
+    width: 800px;
+}
