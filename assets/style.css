@@ -276,6 +276,7 @@ section {
     border-radius: 5px;
     padding: 2rem;
     margin: 1rem;
+    outline: none;
 }
 .red-btn:hover{
     background-color: white;
@@ -298,7 +299,7 @@ section {
 }
 
 .choosen-region {
-    fill: blue !important;
+    fill: var(--wcs-color) !important;
 }
 
 
