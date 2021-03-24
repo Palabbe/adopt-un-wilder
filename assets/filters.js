@@ -1,5 +1,53 @@
+const hiddenSection = [".roles-filter", ".regions-filter", "#submit-filtering"];
+
 /**
- * Initialize roles filtering behaviour
+ * Toggle the display of previously hidden section to be visible, or hidde it if forced as parameter.
+ * @param {*} selector a CSS selector
+ * @param {*} display a display value to apply to the section
+ */
+const toggleDisplaySectionBySelector = (selector, display = "block") => {
+    const section = document.querySelector(selector)
+    section.style.display = display;
+    //TODO: adding animation effect for the display
+}
+
+/**
+ * Initialize Event Listener first step of filtering
+ */
+const initFilteringAction = () => {
+
+    const actionButton = document.getElementById("filtering");
+
+    actionButton.addEventListener('click', (event) => {
+
+        for(let i = 0; i < hiddenSection.length; i++){
+            toggleDisplaySectionBySelector(hiddenSection[i]);
+        }
+        
+        
+        const urlListing = `#roles-filter`;
+        window.location.href = urlListing;
+
+    });
+}
+
+/**
+ * Initialize Event Listener for skipping to all profiles action button
+ */
+const initAllProfilesAction = () => {
+
+    const actionButton = document.getElementById("allProfiles");
+
+    actionButton.addEventListener('click', () => {
+
+        const urlListing = `listing/listing.html`;
+        window.location.href = urlListing;
+
+    });
+}
+
+/**
+ * Initialize Event Listener for roles filtering behaviour
  */
 const initRolesFilter = () => {
     const rolesChoices = document.querySelectorAll(".role-choice");
@@ -25,10 +73,43 @@ const initRolesFilter = () => {
 }
 
 /**
- * Initialize checkbox icons "simulated" behaviour
+ * Initialize Event Listener for regions map filtering behaviour
+ */
+const initRegionsFilter = () => {
+
+    const regionsMap = document.getElementById("map");
+    const regionsMapPaths = regionsMap.querySelectorAll(".region");
+
+    regionsMapPaths.forEach((regionPath) => {
+
+        regionPath.addEventListener('click', function(event) {
+            event.preventDefault();
+
+            if(this.classList.contains("choosen-region")){
+                this.classList.remove("choosen-region");
+
+            } else {
+                const oldRegion = document.querySelector(".regions-map").querySelector(".choosen-region");
+
+                if(oldRegion !== null){
+
+                    oldRegion.classList.remove("choosen-region");
+                }
+                this.classList.add("choosen-region");
+            }
+
+
+        })
+
+    })
+
+}
+
+/**
+ * Initialize Event Listener for the checkbox icons "simulated" behaviour
  */
 const initInRemote = () => {
-    // Toggle check square onclick event
+    
     const inRemote = document.getElementById("inRemote");
 
     inRemote.addEventListener('click', function() {
@@ -50,47 +131,58 @@ const initInRemote = () => {
     });
 }
 
-const displayFilterSection = (section) => {
-    section.style.display = "block";
-    //TODO: adding animation effect for the display
-}
-
-const showNoFilter = () => {
-    //TODO: adding behaviour if required
-}
-
 /**
- * Initialize all the filtering interactivity flow
+ * Setup the filtering section display
  */
 const initFilteringFlow = () => {
 
-    // displaying roles filter
-    const rolesSection = document.querySelector(".roles-filter");
-    displayFilterSection(rolesSection);
+    for(let i = 0; i < hiddenSection.length; i++){
+        toggleDisplaySectionBySelector(hiddenSection[i], "none");
+    }
 
-    // hidding regions filter
-    const regionsSection = document.querySelector(".regions-filter");
-    regionsSection.style.display = "none";
-
-    // binding region filter display
-    const skipAction = document.querySelector("section.roles-filter div.skip-action a");
-    
-    skipAction.addEventListener('click', (event) => {
-        event.preventDefault();
-        displayFilterSection(regionsSection);
-    });
-
-    // binding show all profiles
-    //showNoFilter();
 }
 
 /**
- * Initialize Landing Page interactivity behaviour 
+ * Initialize Event Listener for Filtering Submission
+ */
+const initFilteringSubmit = () => {
+    const filterButton = document.getElementById("filter-btn");
+
+    filterButton.addEventListener('click', (event) => {
+        //event.preventDefault();
+
+        let role = null;
+        const roleLiChoice = document.querySelector(".choosen-role");
+        if(roleLiChoice !== null){
+            role = roleLiChoice.getAttribute("id");
+        }
+
+        let region = null;
+        const regionPath = document.querySelector(".choosen-region");
+        if(regionPath !== null){
+            region = regionPath.getAttribute("id");
+        }
+
+        const inRemote = document.querySelector("#inRemote").classList.contains("fa-check-square");
+
+        const urlListing = `listing/listing.html?role=${role}&region=${region}&remote=${inRemote}`;
+        window.location.href = urlListing;
+    })
+}
+
+/**
+ * Initialize Landing Page filtering main interactivity workflow behaviour 
  */
 const initLandingPage = () => {
+
+    initRegionsFilter();
+    initFilteringAction();
+    initAllProfilesAction();
     initRolesFilter();
     initFilteringFlow();
+    initFilteringSubmit();
     initInRemote();
+
 };
 
 
