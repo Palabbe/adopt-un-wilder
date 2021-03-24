@@ -5,7 +5,6 @@
     justify-content: center;
 }
 
-
 .cardPicture img {
     width: 200px;
     height: 200px;
@@ -21,7 +20,6 @@
     margin: 15px;
     width: 600px;
 }
-
 
 .cardContent h1 {
     color: black;
@@ -39,7 +37,6 @@
     font-style: italic;
 }
 
-
 .cardFooter {
     display: inline-block;
 }
@@ -50,8 +47,6 @@
     text-decoration: none;
 
 }
-
-
 
 .contactMe {
     background-color:#F76C6C;
@@ -75,4 +70,22 @@
     font-family: 'Roboto', sans-serif;
     vertical-align: middle;
 
+}
+
+@media screen and (max-width: 950px) {
+    .fullCard{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        }
+        /* .reverse-order{
+            flex-direction: row;
+            } */
+}
+
+@media screen and (min-width: 951px) {
+    .reverse-order{
+    flex-direction: row-reverse;
+    }
 }
