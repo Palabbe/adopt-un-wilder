@@ -86,11 +86,12 @@ for (let index = 0; index < studentInfo.length; index++)
 }
 
 //Alternance gauche droite
-const fullCard = document.getElementsByClassName("fullCard")
-for (let i = 0; i < fullCard.length; i++)
+const allCards = document.getElementsByClassName("fullCard");
+
+for (let i = 0; i < allCards.length; i++)
 {
     if (i%2 == true)
     {
-        fullCard[i].appendChild(fullCard[i].firstChild)
+        allCards[i].classList.add("reverse-order");
     }
 }
