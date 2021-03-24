@@ -42,6 +42,40 @@ a {
     border: var(--wcs-color-white) solid 0.2rem;
 }
 
+.red-btn{
+    background-color: var(--wcs-color-lighter);
+    color: white; 
+    border: solid 2px white;
+    border-radius: 5px;
+    padding: .5rem;
+    padding-right: 1rem;
+    margin: 1rem;
+}
+.red-btn:hover{
+    background-color: white;
+    color: var(--wcs-color);
+    border-color: var(--wcs-color-lighter);
+    transform: scale(1.1);
+}
+
+#top-btn{
+    position: fixed; 
+    bottom: 20px; 
+    right: 30px; 
+    height: 2rem;
+    width: 5rem;
+    font-size: 2rem;
+    background-color: var(--wcs-color-lighter);
+    color: white; 
+    border-radius: 5px;
+    padding: 1rem;
+    transition: background-color .3s;
+}
+
+#top-btn:hover{
+    background-color: var(--wcs-color);
+}
+
 /* TXT CLASSES */
 
 .center-txt {
