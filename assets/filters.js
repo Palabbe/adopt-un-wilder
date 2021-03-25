@@ -75,7 +75,7 @@ const initRolesFilter = () => {
 /**
  * Initialize Event Listener for regions map filtering behaviour
  */
-const initRegionsFilter = () => {
+const initRegionsMapFilter = () => {
 
     const regionsMap = document.getElementById("map");
     const regionsMapPaths = regionsMap.querySelectorAll(".region");
@@ -157,11 +157,17 @@ const initFilteringSubmit = () => {
             role = roleLiChoice.getAttribute("id");
         }
 
+
         let region = null;
+
         const regionPath = document.querySelector(".choosen-region");
         if(regionPath !== null){
             region = regionPath.getAttribute("id");
         }
+
+        const regionsSelect = document.getElementById("regions-select");
+        region = regionsSelect.selectedOptions[0].value;
+        region = region !== "Sélectionnez une région" ? region : null;
 
         const inRemote = document.querySelector("#inRemote").classList.contains("fa-check-square");
 
@@ -175,7 +181,7 @@ const initFilteringSubmit = () => {
  */
 const initLandingPage = () => {
 
-    initRegionsFilter();
+    initRegionsMapFilter();
     initFilteringAction();
     initAllProfilesAction();
     initRolesFilter();
