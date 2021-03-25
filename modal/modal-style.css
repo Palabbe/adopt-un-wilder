@@ -3,21 +3,28 @@ html {
   --wcs-color-lighter: #f99797;
   --wcs-color-white: #fff;
   color: var(--wcs-color);
-  font-size: 100%;
+  font-size: 10px;
   font-family: "Roboto", sans-serif;
 }
 
 body {
   margin: 0;
+  font-size: 1.4rem;
+}
+
+.name-title {
+  font-size: 2.5rem;
+  font-weight: bold;
 }
 
 .title {
   font-weight: bold;
   text-transform: uppercase;
+  font-size: 2rem;
 }
 
 .subtitle {
-  font-size: 1.2rem;
+  font-size: 1.6rem;
 }
 
 .modal-container {
@@ -63,13 +70,17 @@ body {
   top: 20px;
   right: 20px;
   cursor: pointer;
+  font-size: 30px;
 }
 
 .profil-img {
-  margin: 3rem 0 1rem;
-  width: 15rem;
+  margin-top: 3rem;
+  width: 20rem;
+  height: 20rem;
   border-radius: 50%;
   border: 6px solid #fff;
+  object-fit: cover;
+  background-color: var(--wcs-color-white);
 }
 
 .modal-body {
