@@ -1,3 +1,34 @@
+//Recuperation infos dans l'url
+    const urlVariables = location.search.substring(1).split('&')
+
+    let filteredParameters = []
+    let searchFilters = {
+        region : "" ,
+        remote : "" ,
+        role : "" ,
+    }
+    urlVariables.forEach(element => {
+        filteredParameters.push(element.split('='))
+    });
+
+    filteredParameters.forEach(x => {
+        switch (x[0]) {
+            case "region":
+                x[1] ? searchFilters.region = x[1] : null;
+                break;
+            case "remote":
+                x[1] ? searchFilters.remote = x[1] : null;
+                break;
+            case "role":
+                x[1] ? searchFilters.role = x[1] : null;
+                break;
+            default:
+                break;
+        }
+    })
+
+    console.log(searchFilters);
+
 function createAllCards(name, linkedin, github, speciality, mail, description, photo) {
     const profilList = document.getElementById("profil-list");
 
@@ -74,17 +105,63 @@ function createAllCards(name, linkedin, github, speciality, mail, description, p
     seeMore.appendChild(chevron);
 }
 
-//generation cartes
-for (let index = 0; index < studentInfo.length; index++)
-{
-    createAllCards(studentInfo[index].name,
-                    studentInfo[index].linkedinProfile,
-                    studentInfo[index].githubProfile,
-                    studentInfo[index].speciality,
-                    studentInfo[index].studentMail,
-                    studentInfo[index].region,
+//Recuperation des profils
+let studentsQuery = []
+studentsQuery = studentInfo
+console.log("before : " + studentInfo.length)
 
-                    studentInfo[index].photo ? studentInfo[index].photo : "/assets/img/avatar.png" );
+for (let i = 0; i < studentsQuery.length; i++)
+    {
+        if (searchFilters.region != 'null')
+        {
+            if (studentsQuery[i].region != searchFilters.region)
+            {
+                console.log("removed because region : " + studentsQuery[i].name + "( " + studentsQuery[i].region + " Vs " + searchFilters.region +" )")
+                studentsQuery.splice(i, 1);
+                i--;
+            }
+        }
+
+        if (searchFilters.role != 'null' && studentsQuery[i] != null)
+        {
+            console.log(searchFilters.role);
+            if (studentsQuery[i].speciality != searchFilters.role)
+            {
+                console.log("removed because role : " + studentsQuery[i].name + "( " + studentsQuery[i].speciality + " Vs " + searchFilters.role +" )")
+                studentsQuery.splice(i, 1);
+                i--;
+            }
+        }
+
+        if (searchFilters.remote != 'null' && studentsQuery[i] != null)
+        {
+            if (studentsQuery[i].remote.toString() != searchFilters.remote)
+            {
+                console.log("removed because remote : " + studentsQuery[i].name + "( " + studentsQuery[i].remote + " Vs " + searchFilters.remote +" )")
+                studentsQuery.splice(i, 1);
+                i--;
+            }
+        }
+    };
+
+    console.log("then : " + studentsQuery.length)
+
+console.log(studentsQuery);
+// S'il n'y a pas de profil, nous affichons un message d'erreur
+const listingTitle = document.getElementById("listing-title");
+listingTitle.innerHTML = "Nous n'avons pas trouvé de profils correspondant à votre sélection"
+
+//generation cartes
+for (let index = 0; index < studentsQuery.length; index++)
+{
+
+    createAllCards(studentsQuery[index].name,
+                    studentsQuery[index].linkedinProfile,
+                    studentsQuery[index].githubProfile,
+                    studentsQuery[index].speciality,
+                    studentsQuery[index].studentMail,
+                    studentsQuery[index].region,
+                    studentsQuery[index].photo ? studentsQuery[index].photo : "/assets/img/avatar.png" );
 }
 
 //Alternance gauche droite
