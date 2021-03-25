@@ -24,7 +24,7 @@ let studentsInfos = [
         softSkills : [],
         hobbies : ["lecture", "BD", "photo"],
         previousExperience : [],
-        photo : "",
+        photo : "/assets/img/julien-nicolas.jpg",
     },
 
     {
@@ -40,7 +40,7 @@ let studentsInfos = [
         softSkills : [],
         hobbies :[ "tennis", "lecture"],
         previousExperience : [],
-        photo : "",
+        photo : "/assets/img/milad.jpg",
     },
 
     {
@@ -56,7 +56,7 @@ let studentsInfos = [
         softSkills : [],
         hobbies :[ "randonné", "musculation", "tennis"],
         previousExperience : [],
-        photo : "",
+        photo : "/assets/img/sarah.jpg",
     },
     
     {
@@ -72,7 +72,7 @@ let studentsInfos = [
         softSkills : [],
         hobbies :[ "football"],
         previousExperience : [],
-        photo : "",
+        photo : "/assets/img/julien-bourgineau.jpg",
     },
 
     {
@@ -104,7 +104,7 @@ let studentsInfos = [
         softSkills : [],
         hobbies :[ "jeux vidéos", "moto", "guitare", "tennis"],
         previousExperience : [],
-        photo : "",
+        photo : "/assets/img/tom-carpentier.jpg",
     },
 
     {
@@ -120,7 +120,7 @@ let studentsInfos = [
         softSkills : [],
         hobbies :[ "bricolage", "running", "boxe"],
         previousExperience : [],
-        photo : "",
+        photo : "/assets/img/david-damato.jpg",
     },
 
     {
@@ -136,7 +136,7 @@ let studentsInfos = [
         softSkills : " ",
         hobbies :[ "musique", "jardinage", "musculation"],
         previousExperience : [],
-        photo : "",
+        photo : "/assets/img/aline-dubois.jpg",
     },
 
     {
@@ -152,7 +152,7 @@ let studentsInfos = [
         softSkills : [],
         hobbies :[ "jeux vidéos", "bricolage"],
         previousExperience : [],
-        photo : "",
+        photo : "/assets/img/marieanne-duvieu.jpg",
     },
 
     {
@@ -264,7 +264,7 @@ let studentsInfos = [
         softSkills : [],
         hobbies :[ "musique", "batterie", "tennis"],
         previousExperience : [],
-        photo : "",
+        photo : "/assets/img/edouard-larroche.jpg",
     },
 
     {
@@ -312,7 +312,7 @@ let studentsInfos = [
         softSkills : [],
         hobbies :[ "randonnée"],
         previousExperience : [],
-        photo : "",
+        photo : "/assets/img/kevin-touyard.jpg",
     },
 
     // ----------------------- PHP 
@@ -345,7 +345,7 @@ let studentsInfos = [
         softSkills :" ",
         hobbies :["jeux vidéos"],
         previousExperience : [],
-        photo : "",
+        photo : "/assets/img/anais-berducat.jpg",
     },
     {
         name :"Yannis",
@@ -360,7 +360,7 @@ let studentsInfos = [
         softSkills :" ",
         hobbies :["musique électronique", "VTT"],
         previousExperience : [],
-        photo : "",
+        photo : "/assets/img/yannis-blondron.jpg",
     },
     {
         name :"Franck",
@@ -375,7 +375,7 @@ let studentsInfos = [
         softSkills :" ",
         hobbies :["Bricolage", "Voyages", "Mécanique"],
         previousExperience : [],
-        photo : "",
+        photo : "/assets/img/franck-bouchet.jpg",
     },
     {
         name :"Antoine",
@@ -390,7 +390,7 @@ let studentsInfos = [
         softSkills :" ",
         hobbies :["sport", "lecture"],
         previousExperience : [],
-        photo : "",
+        photo : "/assets/img/antoine-duriez.jpg",
     },
     {
         name :"Julien",
@@ -405,7 +405,7 @@ let studentsInfos = [
         softSkills :" ",
         hobbies :["karaoké", "cinéma", "jeux"],
         previousExperience : [],
-        photo : "",
+        photo : "/assets/img/julien-fourneau.jpg",
     },
     {
         name :"Mickael",
@@ -511,7 +511,7 @@ let studentsInfos = [
         softSkills :"",
         hobbies :["gaming", "lecture"],
         previousExperience : [],
-        photo : "",
+        photo : "/assets/img/amine.jpg",
     },
     {
         name :"Kévin",
@@ -556,7 +556,7 @@ let studentsInfos = [
         softSkills :" ",
         hobbies :["son", "jeux vidéos", "dev", "crypto"],
         previousExperience : [],
-        photo : "",
+        photo : "/assets/img/colin-legac.jpg",
     },
     {
         name :"Fanny",
@@ -571,7 +571,7 @@ let studentsInfos = [
         softSkills :" ",
         hobbies :["Photo", "Danse"],
         previousExperience : [],
-        photo : "",
+        photo : "/assets/img/fanny-lh.jpg",
     },
     {
         name :"Olivier",
@@ -586,7 +586,7 @@ let studentsInfos = [
         softSkills :" ",
         hobbies :["cinéma", "moto", "karaté"],
         previousExperience : [],
-        photo : "",
+        photo : "/assets/img/olivier-maffre.jpg",
     },
     {
         name :"Alexandre",
@@ -601,7 +601,7 @@ let studentsInfos = [
         softSkills :" ",
         hobbies :["JV", "Foot"],
         previousExperience : [],
-        photo : "",
+        photo : "/assets/img/alexandre-morlat.jpg",
     },
     {
         name :"Eddy",
