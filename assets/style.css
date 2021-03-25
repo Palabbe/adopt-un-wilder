@@ -295,12 +295,8 @@ section {
     padding: 1.5rem;
 } */
 
-.skip-action div {
-    height: 25rem; 
-    margin-top: 5rem;
-    padding: 9rem;
-    border: 2px solid var(--wcs-color-lighter);
-    border-radius: 15px;
+.banniere {
+    padding: 5rem;
 }
 
 .red-btn{
@@ -413,6 +409,11 @@ footer div {
         display: block;
         outline: none;
     }
+
+    .banniere {
+        display: none;
+    }
+
 }
 
 @media screen and (min-width: 768.1px) {
@@ -424,6 +425,7 @@ footer div {
     select.regions-select {
         display: none;
     }
+    
 }
 
 @media screen and (max-width: 449px) {
