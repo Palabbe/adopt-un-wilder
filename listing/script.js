@@ -3,9 +3,9 @@
 
     let filteredParameters = []
     let searchFilters = {
-        region : "" ,
-        remote : "" ,
-        role : "" ,
+        region : "null" ,
+        remote : "null" ,
+        role : "null" ,
     }
     urlVariables.forEach(element => {
         filteredParameters.push(element.split('='))
@@ -14,13 +14,13 @@
     filteredParameters.forEach(x => {
         switch (x[0]) {
             case "region":
-                x[1] ? searchFilters.region = x[1] : null;
+                x[1] ? searchFilters.region = x[1] : "null";
                 break;
             case "remote":
-                x[1] ? searchFilters.remote = x[1] : null;
+                x[1] ? searchFilters.remote = x[1] : "null";
                 break;
             case "role":
-                x[1] ? searchFilters.role = x[1] : null;
+                x[1] ? searchFilters.role = x[1] : "null";
                 break;
             default:
                 break;
@@ -30,7 +30,7 @@
     console.log(searchFilters);
 
 function createAllCards(student) {
-    const {name, linkedin, github, speciality, mail, description, photo, id} = student
+    const {name, linkedinProfile, githubProfile, speciality, studentMail, hobbies, photo, id} = student
     const profilList = document.getElementById("profil-list");
 
     const fullCard = document.createElement("div");
@@ -56,7 +56,7 @@ function createAllCards(student) {
     const studentProfile = document.createElement("h2");
     studentProfile.innerHTML = speciality;
     const studentDescription = document.createElement("p");
-    studentDescription.innerHTML = description || '';
+    studentDescription.innerHTML = hobbies || '';
     cardContent.appendChild(studentName);
     cardContent.appendChild(studentProfile);
     cardContent.appendChild(studentDescription);
@@ -71,7 +71,7 @@ function createAllCards(student) {
     //bouton linkedin
     const cardButtonsLinkedin = document.createElement('a');
     cardButtonsLinkedin.classList.add("cardButtons");
-    cardButtonsLinkedin.href = linkedin;
+    cardButtonsLinkedin.href = linkedinProfile;
     cardButtonsLinkedin.target = "blank";
     const iconLinkedin = document.createElement('i');
     cardButtonsLinkedin.classList.add("fab", "fa-linkedin", "fa-3x");
@@ -81,7 +81,7 @@ function createAllCards(student) {
     //bouton github
     const cardButtonsGithub = document.createElement('a');
     cardButtonsGithub.classList.add("cardButtons");
-    cardButtonsGithub.href = github;
+    cardButtonsGithub.href = githubProfile;
     cardButtonsGithub.target = "blank";
     const iconGithub = document.createElement('i');
     cardButtonsGithub.classList.add("fab", "fa-github-square", "fa-3x");
@@ -98,7 +98,7 @@ function createAllCards(student) {
     const contactMe = document.createElement("a");
     contactMe.classList.add("contactMe");
     contactMe.innerHTML = "Seduced? Contact me!"
-    contactMe.href = "mailto:" + mail
+    contactMe.href = "mailto:" + studentMail
 
     contactMeContainer.appendChild(contactMe)
     cardFooter.appendChild(contactMeContainer)
@@ -122,8 +122,8 @@ function createAllCards(student) {
 
 //Recuperation des profils
 let studentsQuery = []
-studentsQuery = studentInfo
-console.log("before : " + studentInfo.length)
+studentsQuery = studentsInfos
+console.log("before : " + studentsInfos.length)
 
 for (let i = 0; i < studentsQuery.length; i++)
     {
@@ -163,11 +163,14 @@ for (let i = 0; i < studentsQuery.length; i++)
 
 console.log(studentsQuery);
 // S'il n'y a pas de profil, nous affichons un message d'erreur
-const listingTitle = document.getElementById("listing-title");
-listingTitle.innerHTML = "Nous n'avons pas trouvé de profils correspondant à votre sélection"
+if (studentsQuery[0] == null)
+{
+    const listingTitle = document.getElementById("listing-title");
+    listingTitle.innerHTML = "Nous n'avons pas trouvé de profils correspondant à votre sélection"
+}
 
 //generation cartes
-studentsInfos.forEach(student => createAllCards(student))
+studentsQuery.forEach(student => createAllCards(student))
 
 //Alternance gauche droite
 const allCards = document.getElementsByClassName("fullCard");
