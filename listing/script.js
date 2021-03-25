@@ -1,5 +1,5 @@
 function createAllCards(student) {
-    const {name, linkedin, github, speciality, mail, description, photo, id} = student
+    const {name, linkedin, github, speciality, studentMail, description, photo, id} = student
     const profilList = document.getElementById("profil-list");
 
     const fullCard = document.createElement("div");
@@ -67,7 +67,7 @@ function createAllCards(student) {
     const contactMe = document.createElement("a");
     contactMe.classList.add("contactMe");
     contactMe.innerHTML = "Seduced? Contact me!"
-    contactMe.href = "mailto:" + mail
+    contactMe.href = "mailto:" + studentMail
 
     contactMeContainer.appendChild(contactMe)
     cardFooter.appendChild(contactMeContainer)
@@ -213,24 +213,25 @@ function openModal(studentId) {
     modalBody.appendChild(links)
 
     const linkedinLink = document.createElement("a")
+    linkedinLink.classList.add("fab", "fa-linkedin", "fa-3x");
+    linkedinLink.style.color = "var(--wcs-color-lighter)"
     linkedinLink.href = selectedStudent.linkedinProfile
     linkedinLink.target = "blank";
     links.appendChild(linkedinLink)
 
-    const linkedinIcon = document.createElement("img")
-    linkedinIcon.classList.add("fab", "fa-linkedin", "fa-3x");
-    linkedinIcon.style.color = "var(--wcs-color-lighter)"
-    linkedinLink.appendChild(linkedinIcon)
-
     const githubLink = document.createElement("a")
+    githubLink.classList.add("fab", "fa-github-square", "fa-3x");
+    githubLink.style.color = "var(--wcs-color-lighter)"
     githubLink.href = selectedStudent.githubProfile
-    linkedinIcon.target = "blank";
+    githubLink.target = "blank";
     links.appendChild(githubLink)
 
-    const githubIcon = document.createElement("img")
-    githubIcon.classList.add("fab", "fa-linkedin", "fa-3x");
-    githubIcon.style.color = "var(--wcs-color-lighter)"
-    githubLink.appendChild(githubIcon)
+    const contactMe = document.createElement("a")
+    contactMe.classList.add("contactMe");
+    contactMe.innerHTML = "Seduced? Contact me!"
+    contactMe.href = "mailto:" + selectedStudent.studentMail
+    contactMe.style.marginBottom = "40px"
+    modalBody.appendChild(contactMe)
 
     document.body.appendChild(modalContainer)
 }
