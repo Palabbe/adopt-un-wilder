@@ -44,18 +44,12 @@ section {
 
 @keyframes sliding{
     0%{
-        transform: translate(-200px, 200%);
+        transform: translate(0, 200%);
         opacity: 0;
-        scale: 1.5;
-    }
-    60%{
-        transform: translate(-50px, 10%);
-        opacity: .5;
     }
     100%{
         transform: translate(0%, 0%);
         opacity: 1;
-        scale: 1;
     }
 
 }
