@@ -38,39 +38,49 @@
 }
 
 .cardFooter {
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .cardButtons {
     margin-right: 10px;  
     vertical-align: middle;
     text-decoration: none;
-
 }
 
 .contactMe {
     background-color:#F76C6C;
     color: #fff;
-    padding: 6px;
+    padding: 10px;
     border-radius: 5px;
     text-decoration: none;
     font-size: 13px;
     font-weight: bold;
     vertical-align: middle;
+    border: var(--wcs-color) solid 2px;
+}
+
+.contactMe:hover{
+    background-color: var(--wcs-color-white);
+    color: var(--wcs-color);
+    border: var(--wcs-color) solid 2px;
 }
 
 .seeMore {
-    padding: 5px;
+    background-color: var(--wcs-color-white);
+    color: var(--wcs-color);
+    padding: 10px;
+    border: var(--wcs-color) solid 2px;
     border-radius: 5px;
-    text-decoration: none;
+    margin: 1rem 0 1rem 2rem;
     font-size: 13px;
-    font-weight: bold;
-    margin-left: 300px;
-    color: black;
-    font-family: 'Roboto', sans-serif;
-    vertical-align: middle;
-
 }
+
+.seeMore:hover {
+        background-color: var(--wcs-color);
+        color: var(--wcs-color-white);
+    }
 
 @media screen and (max-width: 950px) {
     .fullCard{
