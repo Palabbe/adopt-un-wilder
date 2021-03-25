@@ -27,7 +27,7 @@
         }
     })
 
-    console.log(searchFilters);
+    // console.log(searchFilters);
 
 function createAllCards(student) {
     const {name, linkedinProfile, githubProfile, speciality, studentMail, hobbies, photo, id} = student
@@ -71,21 +71,22 @@ function createAllCards(student) {
     //bouton linkedin
     const cardButtonsLinkedin = document.createElement('a');
     cardButtonsLinkedin.classList.add("cardButtons");
-    cardButtonsLinkedin.href = linkedinProfile;
+    if (linkedinProfile != ""){cardButtonsLinkedin.href = linkedinProfile}
     cardButtonsLinkedin.target = "blank";
     const iconLinkedin = document.createElement('i');
     cardButtonsLinkedin.classList.add("fab", "fa-linkedin", "fa-3x");
-    cardButtonsLinkedin.style.color = "var(--wcs-color-lighter)"
+    cardButtonsLinkedin.style.color = linkedinProfile != "" ? "var(--wcs-color-lighter)" : "lightgrey"
+    linkedinProfile != ""
     cardButtonsLinkedin.appendChild(iconLinkedin);
 
     //bouton github
     const cardButtonsGithub = document.createElement('a');
     cardButtonsGithub.classList.add("cardButtons");
-    cardButtonsGithub.href = githubProfile;
+    if (githubProfile != "") {cardButtonsGithub.href = githubProfile};
     cardButtonsGithub.target = "blank";
     const iconGithub = document.createElement('i');
     cardButtonsGithub.classList.add("fab", "fa-github-square", "fa-3x");
-    cardButtonsGithub.style.color = "var(--wcs-color-lighter)"
+    cardButtonsGithub.style.color = githubProfile ? "var(--wcs-color-lighter)" : "lightgrey"
     cardButtonsGithub.appendChild(iconGithub);
 
     linksContainer.appendChild(cardButtonsLinkedin)
@@ -123,13 +124,13 @@ function createAllCards(student) {
 //Recuperation des profils
 let studentsQuery = []
 studentsQuery = studentsInfos
-console.log("before : " + studentsInfos.length)
+// console.log("before : " + studentsInfos.length)
 
 for (let i = 0; i < studentsQuery.length; i++)
     {
         if (searchFilters.region != 'null')
         {
-            if (studentsQuery[i].region != searchFilters.region)
+            if (studentsQuery[i].region[1] != searchFilters.region)
             {
                 console.log("removed because region : " + studentsQuery[i].name + "( " + studentsQuery[i].region + " Vs " + searchFilters.region +" )")
                 studentsQuery.splice(i, 1);
@@ -159,9 +160,9 @@ for (let i = 0; i < studentsQuery.length; i++)
         }
     };
 
-    console.log("then : " + studentsQuery.length)
+    // console.log("then : " + studentsQuery.length)s
 
-console.log(studentsQuery);
+// console.log(studentsQuery);
 // S'il n'y a pas de profil, nous affichons un message d'erreur
 if (studentsQuery[0] == null)
 {
@@ -170,10 +171,14 @@ if (studentsQuery[0] == null)
 }
 
 //generation cartes
+//shuffle all profiles
+studentsQuery.sort(() => 0.5 - Math.random());
 studentsQuery.forEach(student => createAllCards(student))
 
 //Alternance gauche droite
+
 const allCards = document.getElementsByClassName("fullCard");
+ Array.from(allCards)
 
 for (let i = 0; i < allCards.length; i++) {
     if (i % 2) {
@@ -229,7 +234,7 @@ function openModal(studentId) {
 
     const region = document.createElement("p")
     region.classList.add("subtitle")
-    region.innerHTML = selectedStudent.region
+    region.innerHTML = selectedStudent.region[0]
     presentation.appendChild(region)
 
     const presentationText = document.createElement("p")

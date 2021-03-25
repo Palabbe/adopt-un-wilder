@@ -1,14 +1,16 @@
-const ileDeFrance = "Île-de-France";
-const provenceAlpesCoteDAzur = "Provence-Alpes-Côte d'Azur";
-const nouvelleAquitaine = "Nouvelle-Aquitaine";
-const centreValDeLoire = "Centre-Val de Loire";
-const occitanie = "Occitanie";
-const grandEst = "Grand Est";
-const paysDeLaLoire = "Pays de la Loire";
-const auvergneRhoneAlpes = "Auvergne-Rhône-Alpes";
-const bretagne = "Bretagne";
-const alsace = "Alsace";
-const malte = "Malte";
+const ileDeFrance = ["Île-de-France", "ile-de-france"];
+const provenceAlpesCoteDAzur = ["Provence-Alpes-Côte d'Azur", "provence-alpes-cote-d-azur"];
+const nouvelleAquitaine = ["Nouvelle-Aquitaine", "nouvelle-aquitaine"];
+const centreValDeLoire = ["Centre-Val de Loire", "centre-val-de-loire"];
+const occitanie = ["Occitanie", "occitanie"];
+const grandEst = ["Grand Est", "grand-est"];
+const paysDeLaLoire = ["Pays de la Loire", "pays-de-la-loire"];
+const auvergneRhoneAlpes = ["Auvergne-Rhône-Alpes", "auvergne-rhone-alpes"];
+const bretagne = ["Bretagne", "bretagne"];
+const malte = ["Malte"];
+
+// bourgogne-franche-comte
+// hauts-de-france
 
 let studentsInfos = [
     //// Tranche 1 ----------------------------------------------------------------------------------------------
@@ -32,7 +34,7 @@ let studentsInfos = [
         name :"Milad",
         lastname :"Behzadi",
         presentation : "",
-        linkedinProfile : " " ,
+        linkedinProfile : "" ,
         githubProfile : "https://github.com/MiladBhzd",
         studentMail: "milad.bhzdi@gmail.com",
         region : ileDeFrance,
@@ -134,7 +136,7 @@ let studentsInfos = [
         region : nouvelleAquitaine,
         remote : false,
         speciality : "Front-end",
-        softSkills : " ",
+        softSkills : "",
         hobbies :[ "musique", "jardinage", "musculation"],
         previousExperience : [],
         photo : "/assets/img/aline-dubois.jpg",
@@ -144,7 +146,7 @@ let studentsInfos = [
         name : "Marie-Anne",
         lastname : "Duvieu",
         presentation : "",
-        linkedinProfile : " ", 
+        linkedinProfile : "", 
         githubProfile : "https://github.com/Sseven-lab",
         studentMail: "ma.duvieu@gmail.com",
         region : ileDeFrance,
@@ -278,7 +280,7 @@ let studentsInfos = [
         region : occitanie,
         remote : true,
         speciality : "Fullstack",
-        softSkills : " ",
+        softSkills : "",
         hobbies :[ "jeux vidéos", "lecture", "cinéma"],
         previousExperience : [],
         photo : "/assets/img/jerome-shaaban.jpg",
@@ -352,7 +354,7 @@ let studentsInfos = [
         name :"Yannis",
         lastname :"BLONDRON",
         presentation : "",
-        linkedinProfile :" ",
+        linkedinProfile :"",
         githubProfile :"https://github.com/YannisB81",
         studentMail:"blondron.yannis@gmail.com",
         region : ileDeFrance,
@@ -382,7 +384,7 @@ let studentsInfos = [
         name :"Antoine",
         lastname :"Duriez",
         presentation : "",
-        linkedinProfile :" ", 
+        linkedinProfile :"", 
         githubProfile :"Antoine-Duriez",
         studentMail:"antoine.duriez44@gmail.com",
         region :paysDeLaLoire,
@@ -397,7 +399,7 @@ let studentsInfos = [
         name :"Julien",
         lastname :" Fourneau",
         presentation : "",
-        linkedinProfile :" ", 
+        linkedinProfile :"", 
         githubProfile :"",
         studentMail:"cathyjulien14@orange.fr",
         region : ileDeFrance,
@@ -427,7 +429,7 @@ let studentsInfos = [
         name :"Jody",
         lastname :"Gauthier",
         presentation : "",
-        linkedinProfile :" ", 
+        linkedinProfile :"", 
         githubProfile :"https://github.com/jody-g",
         studentMail:"jody.gauthier51@gmail.com",
         region :grandEst,
@@ -448,7 +450,7 @@ let studentsInfos = [
         region :ileDeFrance,
         remote : true,
         speciality : "Fullstack",
-        softSkills : " ",
+        softSkills : "",
         hobbies :[ "lecture", "cinéma"],
         previousExperience : [],
         photo : "/assets/img/justine-giletta.jpg",
@@ -457,7 +459,7 @@ let studentsInfos = [
         name :"Gren",
         lastname :"Anne",
         presentation : "",
-        linkedinProfile :" ", 
+        linkedinProfile :"", 
         githubProfile :"https://github.com/annegren",
         studentMail:"ga.annegren@gmail.com",
         region :provenceAlpesCoteDAzur,
@@ -488,7 +490,7 @@ let studentsInfos = [
         name :"Hugo",
         lastname :"Guillaume",
         presentation : "",
-        linkedinProfile :" ", 
+        linkedinProfile :"", 
         githubProfile :"https://github.com/musosy",
         studentMail:"hugo.guillaume13@gmail.com",
         region :provenceAlpesCoteDAzur,
@@ -503,7 +505,7 @@ let studentsInfos = [
         name :"Amine",
         lastname :"Haddad",
         presentation : "",
-        linkedinProfile :" ", 
+        linkedinProfile :"", 
         githubProfile :"https://github.com/amine-haddad",
         studentMail:"aminehaddad.dev@gmail.com",
         region :centreValDeLoire,
@@ -518,7 +520,7 @@ let studentsInfos = [
         name :"Kévin",
         lastname :"Janson",
         presentation : "",
-        linkedinProfile :" ", 
+        linkedinProfile :"", 
         githubProfile :"https://github.com/JANSONkevin",
         studentMail:"kevin.janson.pro@gmail.com",
         region :auvergneRhoneAlpes,
@@ -533,7 +535,7 @@ let studentsInfos = [
         name :"Guillaume",
         lastname :"Joulia",
         presentation : "",
-        linkedinProfile :" ", 
+        linkedinProfile :"", 
         githubProfile :"https://github.com/Keisuke-Joulia",
         studentMail:"guillaume-joulia_student2021@wilder.school.com",
         region : provenceAlpesCoteDAzur,
@@ -563,7 +565,7 @@ let studentsInfos = [
         name :"Fanny",
         lastname :"Lemaitre-Hermenier",
         presentation : "",
-        linkedinProfile :" ", 
+        linkedinProfile :"", 
         githubProfile :"https://github.com/fanny37",
         studentMail:"flemaitre37@gmail.com",
         region : paysDeLaLoire,
@@ -593,7 +595,7 @@ let studentsInfos = [
         name :"Alexandre",
         lastname :"Morlat",
         presentation : "",
-        linkedinProfile :" ", 
+        linkedinProfile :"", 
         githubProfile :"https://github.com/AlexandreMor",
         studentMail:"alexandre1morlat@gmail.com",
         region :centreValDeLoire,
@@ -611,7 +613,7 @@ let studentsInfos = [
         linkedinProfile :"https://www.linkedin.com/in/eddy-rajaonarivelo-a91296130/", 
         githubProfile :"https://github.com/eddyraja",
         studentMail:"r.edha0068@gmail.com",
-        region :alsace,
+        region :grandEst,
         remote : false,
         speciality :"Back-end",
         softSkills : [],
