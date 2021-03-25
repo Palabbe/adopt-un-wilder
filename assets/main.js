@@ -23,7 +23,7 @@ const studentInfo = [
         softSkills : "",
         hobbies : "lecture, BD, photo",
         previousExperience : "",
-        photo : "",
+        photo : "/assets/img/julien-nicolas.jpg",
     },
 
     {
@@ -38,7 +38,7 @@ const studentInfo = [
         softSkills : "",
         hobbies : "tennis, lecture",
         previousExperience : "",
-        photo : "",
+        photo : "/assets/img/milad.jpg",
     },
 
     {
@@ -53,7 +53,7 @@ const studentInfo = [
         softSkills : "",
         hobbies : "randonnée, musculation, tennis",
         previousExperience : "",
-        photo : "",
+        photo : "/assets/img/sarah.jpg",
     },
     
     {
@@ -68,7 +68,7 @@ const studentInfo = [
         softSkills : "",
         hobbies : "football",
         previousExperience : "",
-        photo : "",
+        photo : "/assets/img/julien-bourgineau.jpg",
     },
 
     {
@@ -98,7 +98,7 @@ const studentInfo = [
         softSkills : "",
         hobbies : "jeux vidéos, moto, guitare, tennis",
         previousExperience : "",
-        photo : "",
+        photo : "/assets/img/tom-carpentier.jpg",
     },
 
     {
@@ -113,7 +113,7 @@ const studentInfo = [
         softSkills : "",
         hobbies : "bricolage, running, boxe",
         previousExperience : "",
-        photo : "",
+        photo : "/assets/img/david-damato.jpg",
     },
 
     {
@@ -128,7 +128,7 @@ const studentInfo = [
         softSkills : " ",
         hobbies : "musique, jardinage, musculation",
         previousExperience : "",
-        photo : "",
+        photo : "/assets/img/aline-dubois.jpg",
     },
 
     {
@@ -143,7 +143,7 @@ const studentInfo = [
         softSkills : "",
         hobbies : "jeux vidéos, bricolage",
         previousExperience : "",
-        photo : "",
+        photo : "/assets/img/marieanne-duvieu.jpg",
     },
 
     {
@@ -248,7 +248,7 @@ const studentInfo = [
         softSkills : "",
         hobbies : "musique, batterie, tennis",
         previousExperience : "",
-        photo : "",
+        photo : "/assets/img/edouard-larroche.jpg",
     },
 
     {
@@ -293,7 +293,7 @@ const studentInfo = [
         softSkills : "",
         hobbies : "randonnée",
         previousExperience : " ",
-        photo : "",
+        photo : "/assets/img/kevin-touyard.jpg",
     },
 
     // ----------------------- PHP 
@@ -324,7 +324,7 @@ const studentInfo = [
         softSkills :" ",
         hobbies :"jeux vidéos",
         previousExperience :" ",
-        photo : "",
+        photo : "/assets/img/anais-berducat.jpg",
     },
     {
         name :"Yannis",
@@ -338,7 +338,7 @@ const studentInfo = [
         softSkills :" ",
         hobbies :"musique électronique, VTT",
         previousExperience :" ",
-        photo : "",
+        photo : "/assets/img/yannis-blondron.jpg",
     },
     {
         name :"Franck",
@@ -352,7 +352,7 @@ const studentInfo = [
         softSkills :" ",
         hobbies :"Bricolage, Voyages, Mécanique",
         previousExperience :" ",
-        photo : "",
+        photo : "/assets/img/franck-bouchet.jpg",
     },
     {
         name :"Antoine",
@@ -366,7 +366,7 @@ const studentInfo = [
         softSkills :" ",
         hobbies :"sport, lecture",
         previousExperience :" ",
-        photo : "",
+        photo : "/assets/img/antoine-duriez.jpg",
     },
     {
         name :"Julien",
@@ -380,7 +380,7 @@ const studentInfo = [
         softSkills :" ",
         hobbies :"karaoké, cinéma, jeux",
         previousExperience :" ",
-        photo : "",
+        photo : "/assets/img/julien-fourneau.jpg",
     },
     {
         name :"Mickael",
@@ -479,7 +479,7 @@ const studentInfo = [
         softSkills :"",
         hobbies :"gaming, lecture",
         previousExperience :" ",
-        photo : "",
+        photo : "/assets/img/amine.jpg",
     },
     {
         name :"Kévin",
@@ -521,7 +521,7 @@ const studentInfo = [
         softSkills :" ",
         hobbies :"son, jeux vidéos, dev, crypto",
         previousExperience :" ",
-        photo : "",
+        photo : "/assets/img/colin-legac.jpg",
     },
     {
         name :"Fanny",
@@ -535,7 +535,7 @@ const studentInfo = [
         softSkills :" ",
         hobbies :"Photo, Danse",
         previousExperience :" ",
-        photo : "",
+        photo : "/assets/img/fanny-lh.jpg",
     },
     {
         name :"Olivier",
@@ -549,7 +549,7 @@ const studentInfo = [
         softSkills :" ",
         hobbies :"cinéma, moto, karaté",
         previousExperience :" ",
-        photo : "",
+        photo : "/assets/img/olivier-maffre.jpg",
     },
     {
         name :"Alexandre",
@@ -563,7 +563,7 @@ const studentInfo = [
         softSkills :" ",
         hobbies :"JV, Foot",
         previousExperience :" ",
-        photo : "",
+        photo : "/assets/img/alexandre-morlat.jpg",
     },
     {
         name :"Eddy",
