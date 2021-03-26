@@ -37,7 +37,7 @@ section {
 }
 
 #back-button{
-    padding: 1rem;
+    padding: .5rem;
 }
 
 #welcome-section{
@@ -83,6 +83,6 @@ section {
         align-items: center;
     }
     #back-button{
-        padding: 1rem 8rem;
+        padding: .5rem 8rem;
     }
 }
