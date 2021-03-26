@@ -19,6 +19,8 @@ const initFilteringAction = () => {
     const actionButton = document.getElementById("filtering");
 
     actionButton.addEventListener('click', (event) => {
+        const footer = document.getElementById("footer")
+        footer.style.position = "relative"
 
         for(let i = 0; i < hiddenSections.length; i++){
             toggleDisplaySectionBySelector(hiddenSections[i]);
