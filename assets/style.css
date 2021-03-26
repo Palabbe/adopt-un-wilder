@@ -1,8 +1,10 @@
 * {
     padding: 0;
+    margin: 0;
 }
 
 html{
+    height: 100%;
     --wcs-color: #F76C6C;
     --wcs-color-lighter: #F99797;
     --wcs-color-more-lighter: #ffc6c6;
@@ -345,6 +347,9 @@ footer {
     background-color: var(--wcs-color);
     padding: 1rem;
     margin-top: 2rem;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
 }
 
 footer div {
@@ -379,7 +384,9 @@ footer div {
     color: var(--wcs-color-more-lighter);
 }
 
-
+#blockColorblindContent {
+    display: none;
+}
 
 /* ----------------- MEDIA QUERIES ------------------- */
 
