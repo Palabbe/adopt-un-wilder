@@ -180,7 +180,7 @@ let studentsInfos = [
         skills : [],
         hobbies :[ "fanfare", "batterie"],
         previousExperience : [],
-        photo : "",
+        photo : "/assets/img/violaine-ernotte.jpg",
         languages : ["HTML", "CSS", "JS"],
     },
     //// Tranche 2 ----------------------------------------------------------------------------------------------
@@ -657,7 +657,7 @@ let studentsInfos = [
         skills : [],
         hobbies :["Bicolage", "Electronique"],
         previousExperience : [],
-        photo : "",
+        photo : "/assets/img/eddy-raja.jpg",
         languages : ["HTML", "CSS", "PHP"],
     },
     {
