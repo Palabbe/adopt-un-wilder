@@ -52,6 +52,10 @@ body {
   background-color: var(--wcs-color-white);
 }
 
+.modal p, h2, h3, li{
+  color: #333;
+}
+
 .modal-header {
   width: 100%;
   background: linear-gradient(
@@ -115,4 +119,12 @@ body {
   background-color: #f76c6c;
   margin: 2rem 0;
   cursor: pointer;
+}
+
+@media screen  and (max-width: 700px) {
+  .modal{
+    width: 450px;
+
+  }
+
 }

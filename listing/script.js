@@ -298,15 +298,15 @@ function openModal(studentId) {
 
     const linkedinLink = document.createElement("a")
     linkedinLink.classList.add("fab", "fa-linkedin", "fa-3x");
-    linkedinLink.style.color = "var(--wcs-color-lighter)"
-    linkedinLink.href = selectedStudent.linkedinProfile
+    linkedinLink.style.color = selectedStudent.linkedinProfile ? "var(--wcs-color-lighter)" : "lightgrey"
+    if (selectedStudent.linkedinProfile != "") {linkedinLink.href = selectedStudent.linkedinProfile}
     linkedinLink.target = "blank";
     links.appendChild(linkedinLink)
 
     const githubLink = document.createElement("a")
     githubLink.classList.add("fab", "fa-github-square", "fa-3x");
-    githubLink.style.color = "var(--wcs-color-lighter)"
-    githubLink.href = selectedStudent.githubProfile
+    githubLink.style.color = selectedStudent.githubProfile ? "var(--wcs-color-lighter)": "lightgrey"
+    if (selectedStudent.githubProfile != "") {githubLink.href = selectedStudent.githubProfile}
     githubLink.target = "blank";
     links.appendChild(githubLink)
 
