@@ -33,7 +33,7 @@ section {
 #profil-list{
     justify-content: center;
     margin:  auto ;
-    width: 800px;
+    max-width: 1200px;
 }
 
 #back-button{
