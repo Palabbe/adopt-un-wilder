@@ -13,18 +13,22 @@ body {
 }
 
 .name-title {
+  text-transform: uppercase;
   font-size: 2.5rem;
   font-weight: bold;
+  margin: 1rem 0 1rem 0;
 }
 
 .title {
   font-weight: bold;
   text-transform: uppercase;
   font-size: 2rem;
+  margin: 1rem 0 1rem 0;
 }
 
 .subtitle {
   font-size: 1.6rem;
+  margin-bottom: 0.5rem;
 }
 
 .modal-container {
