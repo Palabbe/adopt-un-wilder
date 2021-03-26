@@ -89,10 +89,13 @@
         justify-content: center;
         flex-direction: column;
         align-items: center;
+        margin-bottom: 5rem;
         }
-        /* .reverse-order{
-            flex-direction: row;
-            } */
+
+        .cardPicture img{
+            margin: -1rem;
+        }
+        
 }
 
 @media screen and (min-width: 951px) {
@@ -108,4 +111,7 @@
         grid-gap: 1rem;
         align-self: center;
     }
+
+ 
+
 }
