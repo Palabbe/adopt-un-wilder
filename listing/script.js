@@ -94,15 +94,15 @@ function createAllCards(student) {
     cardFooter.appendChild(linksContainer)
 
     // contact me
-    const contactMeContainer = document.createElement("div")
+    // const contactMeContainer = document.createElement("div")
 
     const contactMe = document.createElement("a");
     contactMe.classList.add("contactMe");
     contactMe.innerHTML = "Seduced? Contact me!"
     contactMe.href = "mailto:" + studentMail
 
-    contactMeContainer.appendChild(contactMe)
-    cardFooter.appendChild(contactMeContainer)
+    linksContainer.appendChild(contactMe)
+    cardFooter.appendChild(linksContainer)
 
     //see more
     const seeMoreContainer = document.createElement("div")
