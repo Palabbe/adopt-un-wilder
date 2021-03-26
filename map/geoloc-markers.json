@@ -1,0 +1,32 @@
+[
+    {
+      "name": "Manon",
+      "picUrl": "../assets/img/manon-josse.jpg",
+      "lat": 48.7833,
+      "lng": 2.55
+    },
+    {
+      "name": "Pauline",
+      "picUrl": "../assets/img/pauline-labbe.jpg",
+      "lat": 47.2173,
+      "lng": -1.5534
+    },
+    {
+      "name": "Pierre",
+      "picUrl": "../assets/img/pierre-houot.jpg",
+      "lat": 48.7833,
+      "lng": 2.4667
+    },
+    {
+      "name": "Tom",
+      "picUrl": "",
+      "lat": 43.6043,
+      "lng": 1.4437
+    },
+    {
+        "name": "Julien Nicolas",
+        "picUrl": "",
+        "lat": 43.5283,
+        "lng": 5.4497
+    }
+ ]

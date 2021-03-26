@@ -1,4 +1,4 @@
-const hiddenSection = [".roles-filter", ".regions-filter", "#submit-filtering"];
+const hiddenSections = [".roles-filter", ".regions-filter", "#submit-filtering"];
 
 /**
  * Toggle the display of previously hidden section to be visible, or hidde it if forced as parameter.
@@ -20,8 +20,8 @@ const initFilteringAction = () => {
 
     actionButton.addEventListener('click', (event) => {
 
-        for(let i = 0; i < hiddenSection.length; i++){
-            toggleDisplaySectionBySelector(hiddenSection[i]);
+        for(let i = 0; i < hiddenSections.length; i++){
+            toggleDisplaySectionBySelector(hiddenSections[i]);
         }
         
         
@@ -75,7 +75,7 @@ const initRolesFilter = () => {
 /**
  * Initialize Event Listener for regions map filtering behaviour
  */
-const initRegionsFilter = () => {
+const initRegionsMapFilter = () => {
 
     const regionsMap = document.getElementById("map");
     const regionsMapPaths = regionsMap.querySelectorAll(".region");
@@ -84,6 +84,13 @@ const initRegionsFilter = () => {
 
         regionPath.addEventListener('click', function(event) {
             event.preventDefault();
+
+            regionsMap.classList.add("active");
+            const regionsSelect = document.getElementById("regions-select");
+            if(regionsSelect.classList.contains("active")){
+                regionsSelect.classList.remove("active");
+            }
+
 
             if(this.classList.contains("choosen-region")){
                 this.classList.remove("choosen-region");
@@ -98,12 +105,31 @@ const initRegionsFilter = () => {
                 this.classList.add("choosen-region");
             }
 
-
         })
 
     })
 
 }
+
+/**
+ * Initialize Event Listener for regions select filtering behaviour
+ */
+ const initRegionsSelectFilter = () => {
+    const regionsSelect = document.getElementById("regions-select");
+
+    const events = ["click", "change"];
+
+    events.forEach((eventName) => {
+        regionsSelect.addEventListener(eventName, () => {
+            regionsSelect.classList.add("active");
+
+            const regionsMap = document.getElementById("map");
+            if(regionsMap.classList.contains("active")){
+                regionsMap.classList.remove("active");
+            }
+        })
+    });
+ }
 
 /**
  * Initialize Event Listener for the checkbox icons "simulated" behaviour
@@ -136,8 +162,8 @@ const initInRemote = () => {
  */
 const initFilteringFlow = () => {
 
-    for(let i = 0; i < hiddenSection.length; i++){
-        toggleDisplaySectionBySelector(hiddenSection[i], "none");
+    for(let i = 0; i < hiddenSections.length; i++){
+        toggleDisplaySectionBySelector(hiddenSections[i], "none");
     }
 
 }
@@ -157,11 +183,25 @@ const initFilteringSubmit = () => {
             role = roleLiChoice.getAttribute("id");
         }
 
+
         let region = null;
-        const regionPath = document.querySelector(".choosen-region");
-        if(regionPath !== null){
-            region = regionPath.getAttribute("id");
+
+        const regionsMap = document.getElementById("map");
+        const regionsSelect = document.getElementById("regions-select");
+
+        if(regionsMap.classList.contains("active")){
+            const regionPath = document.querySelector(".choosen-region");
+
+            if(regionPath !== null){
+                region = regionPath.getAttribute("id");
+            }
+        } else if(regionsSelect.classList.contains("active")){
+            region = regionsSelect.selectedOptions[0].value;
+            region = region !== "Sélectionnez une région" ? region : null;
         }
+        
+
+       
 
         const inRemote = document.querySelector("#inRemote").classList.contains("fa-check-square");
 
@@ -175,7 +215,8 @@ const initFilteringSubmit = () => {
  */
 const initLandingPage = () => {
 
-    initRegionsFilter();
+    initRegionsMapFilter();
+    initRegionsSelectFilter();
     initFilteringAction();
     initAllProfilesAction();
     initRolesFilter();
