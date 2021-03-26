@@ -36,6 +36,17 @@ section {
     max-width: 1200px;
 }
 
+#back-button{
+    padding: .5rem;
+}
+
+#welcome-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+}
+
 .fullCard{
     animation: sliding .5s ease-out forwards;
     opacity: 0;
@@ -66,3 +77,12 @@ section {
 .fullCard:nth-child(4) {animation-delay: .3s; }
 .fullCard:nth-child(5) {animation-delay: .4s; }
 
+@media screen  and (max-width: 950px) {
+    #welcome-section{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    #back-button{
+        padding: .5rem 8rem;
+    }
+}
