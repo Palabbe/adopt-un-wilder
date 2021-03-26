@@ -258,22 +258,22 @@ function openModal(studentId) {
     })
     experiences.appendChild(experiencesList)
 
-    const softSkills = document.createElement("div")
-    softSkills.classList.add("resume-list")
-    modalBody.appendChild(softSkills)
+    const skills = document.createElement("div")
+    skills.classList.add("resume-list")
+    modalBody.appendChild(skills)
 
-    const softSkillsTitle = document.createElement("h3")
-    softSkillsTitle.classList.add("title")
-    softSkillsTitle.innerHTML = "Soft Skills"
-    softSkills.appendChild(softSkillsTitle)
+    const skillsTitle = document.createElement("h3")
+    skillsTitle.classList.add("title")
+    skillsTitle.innerHTML = "Soft Skills"
+    skills.appendChild(skillsTitle)
 
-    const softSkillsList = document.createElement("ul")
-    selectedStudent.softSkills.forEach(softSkills => {
-        const softSkillsItem = document.createElement("li")
-        softSkillsItem.innerHTML = softSkills
-        softSkillsList.appendChild(softSkillsItem)
+    const skillsList = document.createElement("ul")
+    selectedStudent.skills.forEach(skills => {
+        const skillsItem = document.createElement("li")
+        skillsItem.innerHTML = skills
+        skillsList.appendChild(skillsItem)
     })
-    softSkills.appendChild(softSkillsList)
+    skills.appendChild(skillsList)
 
     const hobbies = document.createElement("div")
     hobbies.classList.add("resume-list")
