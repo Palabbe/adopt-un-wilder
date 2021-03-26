@@ -218,6 +218,7 @@ section {
     width: 250px;
     background-color: var(--wcs-color);
     border-radius: 50%;
+    border: 4px solid var(--wcs-color);
 }
 
 .svg-icon {
@@ -230,6 +231,10 @@ section {
 .svg-icon:hover {
     height: 275px;
     transition: height 1s ease-in;
+}
+
+.role-choice-icon:hover {
+    border-color: var(--wcs-color-lighter);
 }
 
 .role-choice a span {
@@ -320,7 +325,7 @@ section {
 /*------------ JS interactivity CSS CLASSES -----------*/
 .choosen-role div.role-choice-icon{
     background-color: var(--wcs-color-lighter);
-    border: 4px solid var(--wcs-color);
+    border-color: var(--wcs-color);
 }
 
 .choosen-role .svg-icon {
